@@ -16,6 +16,10 @@
 		C124A7E328E59D9D00372C51 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C124A7E028E59D9D00372C51 /* NotoSansKR-Medium.otf */; };
 		C124A7E428E59D9D00372C51 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C124A7E128E59D9D00372C51 /* NotoSansKR-Regular.otf */; };
 		C124A7E528E59D9D00372C51 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C124A7E228E59D9D00372C51 /* NotoSansKR-Bold.otf */; };
+		D810501028E6CCB8007E18D5 /* AboutThemeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810500E28E6CCB8007E18D5 /* AboutThemeItemCell.swift */; };
+		D810501128E6CCB8007E18D5 /* AboutThemeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D810500F28E6CCB8007E18D5 /* AboutThemeItemCell.xib */; };
+		D810501428E6CCD5007E18D5 /* AboutThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D810501228E6CCD5007E18D5 /* AboutThemeCell.swift */; };
+		D810501528E6CCD5007E18D5 /* AboutThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D810501328E6CCD5007E18D5 /* AboutThemeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		C124A7E028E59D9D00372C51 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		C124A7E128E59D9D00372C51 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		C124A7E228E59D9D00372C51 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		D810500E28E6CCB8007E18D5 /* AboutThemeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutThemeItemCell.swift; sourceTree = "<group>"; };
+		D810500F28E6CCB8007E18D5 /* AboutThemeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutThemeItemCell.xib; sourceTree = "<group>"; };
+		D810501228E6CCD5007E18D5 /* AboutThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutThemeCell.swift; sourceTree = "<group>"; };
+		D810501328E6CCD5007E18D5 /* AboutThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutThemeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 		C124A7C528E542A100372C51 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				D810500B28E6CACB007E18D5 /* AboutThemeCell */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -140,6 +149,33 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		D810500B28E6CACB007E18D5 /* AboutThemeCell */ = {
+			isa = PBXGroup;
+			children = (
+				D810500D28E6CB4A007E18D5 /* CollectionCell */,
+				D810500C28E6CB31007E18D5 /* TableViewCell */,
+			);
+			path = AboutThemeCell;
+			sourceTree = "<group>";
+		};
+		D810500C28E6CB31007E18D5 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D810501228E6CCD5007E18D5 /* AboutThemeCell.swift */,
+				D810501328E6CCD5007E18D5 /* AboutThemeCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		D810500D28E6CB4A007E18D5 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				D810500E28E6CCB8007E18D5 /* AboutThemeItemCell.swift */,
+				D810500F28E6CCB8007E18D5 /* AboutThemeItemCell.xib */,
+			);
+			path = CollectionCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,11 +235,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C124A7E328E59D9D00372C51 /* NotoSansKR-Medium.otf in Resources */,
+				D810501528E6CCD5007E18D5 /* AboutThemeCell.xib in Resources */,
 				63487F4428E2EA5E0033CF32 /* LaunchScreen.storyboard in Resources */,
 				63487F4128E2EA5E0033CF32 /* Assets.xcassets in Resources */,
 				63487F3F28E2EA5E0033CF32 /* Main.storyboard in Resources */,
 				C124A7E528E59D9D00372C51 /* NotoSansKR-Bold.otf in Resources */,
 				C124A7E428E59D9D00372C51 /* NotoSansKR-Regular.otf in Resources */,
+				D810501128E6CCB8007E18D5 /* AboutThemeItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D810501028E6CCB8007E18D5 /* AboutThemeItemCell.swift in Sources */,
 				63487F3C28E2EA5E0033CF32 /* ViewController.swift in Sources */,
 				63487F3828E2EA5E0033CF32 /* AppDelegate.swift in Sources */,
+				D810501428E6CCD5007E18D5 /* AboutThemeCell.swift in Sources */,
 				63487F3A28E2EA5E0033CF32 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
