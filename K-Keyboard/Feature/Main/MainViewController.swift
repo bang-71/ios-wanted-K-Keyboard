@@ -36,8 +36,8 @@ class MainViewController: UIViewController {
         tableView.register(TagCellNib, forCellReuseIdentifier: TagCell.identifier)
         
         let HeaderNib = UINib(nibName: HeaderView.identifier, bundle: Bundle(for: self.classForCoder))
-        tableView.register(HeaderNib, forCellReuseIdentifier: HeaderView.identifier)
-       
+        tableView.register(HeaderNib, forHeaderFooterViewReuseIdentifier: HeaderView.identifier)
+        
     }
     
     func dataBinding() {
@@ -121,15 +121,6 @@ extension MainViewController: UITableViewDataSource {
         //        }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let dataSource = dto?.dataSource[section] else { return nil }
-        let section = dataSource.section
-        
-        switch section {
-        default:
-            return nil
-        }
-    }
 }
 
 extension MainViewController: UITableViewDelegate {
@@ -155,14 +146,12 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let dataSource = dto?.dataSource[section] else { return nil }
         let section = dataSource.section
-        let row = dataSource.items.first
         
         switch section {
         case .tags:
             let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.identifier)
-            if let view = view as? HeaderView,
-               case .tags(let tagData) = row {
-                view.set(sectionName: SectionListType.tag.rawValue, rowCount: tagData.count)
+            if let view = view as? HeaderView {
+                view.set(sectionName: SectionListType.tag.rawValue)
             }
             return view
         default:
@@ -176,7 +165,7 @@ extension MainViewController: UITableViewDelegate {
         
         switch section {
         case .tags:
-            return 50
+            return 44
         default:
             return .zero
         }

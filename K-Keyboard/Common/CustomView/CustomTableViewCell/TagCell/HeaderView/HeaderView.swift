@@ -15,17 +15,11 @@ class HeaderView: UITableViewHeaderFooterView {
     override func awakeFromNib() {
             super.awakeFromNib()
             
-            prepareForReuse()
+//            prepareForReuse()
         }
     
-    func set(sectionName: String, rowCount: Int?) {
+    func set(sectionName: String) {
         self.headerLabel.text = sectionName
-        
-        if let rowCount = rowCount {
-            self.headerLabel.text = "\(rowCount)"
-        } else {
-            self.headerLabel.isHidden = true
-        }
     }
     
     override func prepareForReuse() {
